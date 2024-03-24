@@ -1,0 +1,22 @@
+Background:
+Integration tests involving external services were unreliable and slow,
+primarily due to the dependency on these external services' availability and response times.
+
+Solution:
+The team implemented asynchronous mock services using asyncio,
+mimicking the behavior of external dependencies. These mock services could handle multiple incoming connections concurrently,
+offering predictable response times and allowing for more reliable and consistent integration testing.
+
+Challenges:
+Reliance on external services for integration testing introduces variability in test execution times and can lead to flaky tests,
+especially when these services are slow or unavailable.
+
+asyncio Application:
+Creating asynchronous mock services using asyncio provides a controlled environment for integration testing,
+with the ability to simulate various responses and conditions of external services.
+These mocks can handle numerous connections simultaneously, offering consistent and predictable response times.
+
+Anticipated Outcomes:
+Using asynchronous mock services can lead to more reliable and faster integration tests,
+reducing the impact of external dependencies on test stability. It allows for comprehensive testing of error handling and edge cases,
+improving the robustness of the application.
