@@ -5,12 +5,14 @@ from time import perf_counter
 def on_load(page_object):
     print('Page loaded:', page_object)
 
+
 def on_request(request):
     print('Request sent:', request)
+
+
 def on_filechooser(file_chooser):
     print('File chooser is opened')
     file_chooser.set_files('test.txt')
-
 
 
 with sync_playwright() as playwright:

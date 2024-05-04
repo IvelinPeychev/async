@@ -1,0 +1,8 @@
+install pytest plugin
+pip install pytest-xdist
+
+run test with auto value based on the CPU
+pytest --numprocesses auto
+
+run test with 3 workers (will run 3 tests at once)
+pytest --n 3

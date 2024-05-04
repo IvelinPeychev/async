@@ -2,17 +2,18 @@ import pytest
 from playwright.sync_api import Browser, Page
 
 
-@pytest.fixture()
+@pytest.fixture(scope='session')
 def record_video(browser: Browser):
     context = browser.new_context(
         record_video_dir='video/'
     )
     page = context.new_page()
     yield page
-    page.close()
+    context.close()
 
 
-def test_page_has_get_started_link(page: Browser):
+def test_page_has_get_started_link(record_video):
+    page = record_video
     # Navigate to the Playwright documentation for Python
     page.goto("https://playwright.dev/python")
 

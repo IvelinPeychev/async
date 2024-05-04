@@ -1,0 +1,13 @@
+for using with pytest command in terminal
+
+--headed - for showing browser window during execution
+--slowmo=500 - slowing down the browser
+--browser=firefox - changing the browser
+--device='Pixel 5' - emulate a testing device
+--tracing (on / off / retain-on-failure) - will provide or not provide test results in zip file in test-result directory
+--video on - will create a video for each test
+--screenshot on - will create a screenshot after the test is done
+--screenshot only-on-failure - will create a screenshot only the test failed
+-k {test name} - will only collect the test name to run
+
+

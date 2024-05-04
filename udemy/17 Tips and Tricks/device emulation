@@ -1,0 +1,7 @@
+https://github.com/microsoft/playwright/blob/main/packages/playwright-core/src/server/deviceDescriptorsSource.json
+
+to use for example pixel 5 in fun add:
+
+pixel_5_args = playwright.devices['Pixel 5']
+context = browser.new_context(**pixel_5_args)
+
